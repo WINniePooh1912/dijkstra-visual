@@ -14,7 +14,6 @@ import java.util.Timer;
 import java.util.Vector;
 import javax.swing.AbstractAction;
 import javax.swing.Action;
-import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -23,7 +22,7 @@ import javax.swing.JTextArea;
 
 public class PaintingPanel extends JPanel {
 	
-    private static final Dimension SIZE = new Dimension(3000, 1800);
+    private static final Dimension SIZE = new Dimension(1000, 1000);
     private Image offScreenImageDrawed = null;
     private Graphics offScreenGraphicsDrawed = null;              
     private Timer timer = new Timer();
@@ -292,10 +291,8 @@ public class PaintingPanel extends JPanel {
             }
 
             if(e.getActionCommand() == "Eliminar nodo") {
-                if(JOptionPane.showConfirmDialog(new JDialog(), "¿Estas seguro de eliminar el nodo?", "Eliminar Nodo", JOptionPane.OK_CANCEL_OPTION) == JOptionPane.OK_OPTION) {
                     PaintingPanel.this.removeNode(indexNodeClicked);
                     indexNodeClicked = -1;
-                }
             }
 
             if(e.getActionCommand() == "Seleccionar nodo") {
@@ -357,10 +354,8 @@ public class PaintingPanel extends JPanel {
                 }
             }
 
-            if(e.getActionCommand() == "Eliminar conexión") {
-                if(JOptionPane.showConfirmDialog(new JDialog(), "¿Estas seguro de eliminar la conexión?", "Eliminar conexión", JOptionPane.OK_CANCEL_OPTION) == JOptionPane.OK_OPTION) {
+            if(e.getActionCommand() == "Eliminar conexión") {                
                     PaintingPanel.this.removeConnector(indexConnectorClicked);
-                }
             }
         }
     }
@@ -376,7 +371,7 @@ public class PaintingPanel extends JPanel {
         if(path.size() -1 > 0) {
             sPath.append("Distancia de la ruta más corta " + currentWeigth + ": ");
         } else {
-            sPath.append("No existe ruta :");
+            sPath.append("No existe ruta para llegar al nodo deseado :c ");
         }
 
         for (Integer i : path) {
@@ -439,7 +434,7 @@ public class PaintingPanel extends JPanel {
 
                 return weight;
             } catch(Exception ex) {
-                JOptionPane.showMessageDialog(new JFrame(), "¡Valor incorrecto!", "Error", JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(new JFrame(), "¡Valor inválido!", "Error", JOptionPane.WARNING_MESSAGE);
             }
         } while(weight == -1);
 
