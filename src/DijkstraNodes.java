@@ -19,7 +19,7 @@ public class DijkstraNodes extends JFrame {
         } catch (ClassNotFoundException | InstantiationException 
         		| IllegalAccessException | UnsupportedLookAndFeelException ex) {}
 		
-            this.setTitle("Dijkstra :p");
+            this.setTitle("Dijkstra visualmente implementado");
             this.setBounds(500, 300, 800, 500);
             this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 

@@ -6,10 +6,12 @@ import java.util.Vector;
 public class DijkstraAlgorithm {
     public static Vector<Integer> getMinCostPath(AdjacencyList adjacencyList, int start, int dest) {
         PriorityQueue<Edge> Q = new PriorityQueue<>();
+        
         Vector<Double> distance = new Vector<>();
         Vector<Boolean> visited = new Vector<>();		 
         Vector<Integer> prev = new Vector<>();
         Vector<Integer> path = new Vector<>();
+        
         int numV = adjacencyList.size(), current, adjacent;
         double weight;
 

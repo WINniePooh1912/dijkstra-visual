@@ -378,7 +378,7 @@ public class PaintingPanel extends JPanel {
             sPath.append(nodeDrw.get(i).getText());
 
             if(i != path.lastElement()) {
-                    sPath.append(" -> ");
+                    sPath.append(" --> ");
             }
         }
         

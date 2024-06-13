@@ -34,25 +34,7 @@ public class AdjacencyList {
         return data.get(source);
     }
 	
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-
-        for(int i = 0; i < data.size(); i++) {
-            sb.append("Node[" + i + "]={");
-
-            for(Edge n : data.get(i)){ 
-                sb.append(n);
-
-                if(!n.equals(data.get(i).get(data.get(i).size()-1))) {
-                    sb.append(", ");
-                }
-            }
-            sb.append("}\n");
-        }
-        return sb.toString();
+    public int size() { 
+        return data.size(); 
     }
-	
-	public int size() { 
-            return data.size(); 
-        }
 }
