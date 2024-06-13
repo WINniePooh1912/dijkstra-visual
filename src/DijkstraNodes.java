@@ -22,7 +22,6 @@ public class DijkstraNodes extends JFrame {
             this.setTitle("Dijkstra :p");
             this.setBounds(500, 300, 800, 500);
             this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-            this.setJMenuBar(new DijkstraNodesBar(null));
 
             add(new DijkstraNodesJPanel());
 
