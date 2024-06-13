@@ -81,7 +81,7 @@ public class DrawableNode {
             background = new Color(204,238,241); // blue
         }
     }
-
+    
     public boolean isMouseOver(double x, double y) {
         return circle.contains(x, y);
     }
@@ -102,7 +102,7 @@ public class DrawableNode {
     public String getText() {
         return text;
     }
-
+    
     public void setText(String text) {
         this.text = text;
     }

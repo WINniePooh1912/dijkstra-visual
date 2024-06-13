@@ -511,11 +511,11 @@ public class PaintingPanel extends JPanel {
 
     private void unselectNodes() {
         changeColorPath(false);
-
+        
         for(Integer i : selection) {
             nodeDrw.elementAt(i).changeColor();
         }
-
+        
         selection.clear();
     }
 
